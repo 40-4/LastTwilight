@@ -12,7 +12,10 @@ var dash_duration : float = 0.3
 var dash_direction : Vector2 = Vector2.ZERO
 var is_dashing : float = 0
 
-#onready variables
+###Onready variables
+@onready var pivot_book = $Pivot
+@onready var book = $Pivot/Book
+@onready var sprite = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +24,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.skew = (lerp(skew, direction.x * 0.15, 1-pow(0.02, delta)))
+	sprite.skew = (lerp(skew, direction.x * 10, 1-pow(0.5, delta)))
+	pivot_book.look_at(get_global_mouse_position())
+	book.rotation = pivot_book.rotation * -1
 
 
 func _physics_process(delta):

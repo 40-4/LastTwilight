@@ -1,10 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyjfnksv54alu"]
+[gd_scene load_steps=11 format=3 uid="uid://cyjfnksv54alu"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_wosn6"]
 [ext_resource type="Texture2D" uid="uid://bvjvahqp6w0wn" path="res://Player/Player_Idle.png" id="2_cdgk1"]
+[ext_resource type="Texture2D" uid="uid://bggwr3wsgth7s" path="res://Player/Book.png" id="3_3bdk6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u1g2m"]
 radius = 12.0
+
+[sub_resource type="Animation" id="Animation_868tq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2)]
+}
 
 [sub_resource type="Animation" id="Animation_dhsvu"]
 resource_name = "idle"
@@ -35,37 +63,48 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(0, -2), Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_868tq"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_svxbu"]
+_data = {
+"RESET": SubResource("Animation_868tq"),
+"idle": SubResource("Animation_dhsvu")
+}
+
+[sub_resource type="Animation" id="Animation_2o0sv"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -14), Vector2(0, -18)]
+}
+
+[sub_resource type="Animation" id="Animation_1xe7f"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("..:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:offset")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -2)]
+"values": [Vector2(0, -16)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_svxbu"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cmxiy"]
 _data = {
-"RESET": SubResource("Animation_868tq"),
-"idle": SubResource("Animation_dhsvu")
+"RESET": SubResource("Animation_1xe7f"),
+"idle": SubResource("Animation_2o0sv")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -94,5 +133,19 @@ drag_bottom_margin = 0.1
 [node name="AnimationIdle" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_svxbu")
+}
+autoplay = "idle"
+
+[node name="Pivot" type="Marker2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="Book" type="Sprite2D" parent="Pivot"]
+position = Vector2(16, -2.00699)
+texture = ExtResource("3_3bdk6")
+
+[node name="AnimationIdle" type="AnimationPlayer" parent="Pivot"]
+root_node = NodePath("../Book")
+libraries = {
+"": SubResource("AnimationLibrary_cmxiy")
 }
 autoplay = "idle"
