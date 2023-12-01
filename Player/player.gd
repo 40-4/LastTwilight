@@ -6,14 +6,13 @@ extends CharacterBody2D
 
 ###Debug Variables
 var direction : Vector2 = Vector2.ZERO
-var speed : float = 250.0 #TODO: Acceleration
+var speed : float = 150.0 #TODO: Acceleration
 var dash_speed : float = 450.0
 var dash_duration : float = 0.3
 var dash_direction : Vector2 = Vector2.ZERO
 var is_dashing : float = 0
 
 #onready variables
-@onready var camera_pivot : Marker2D = $CameraPivot
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,8 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#Camera points to mouse
-	camera_pivot.look_at(get_global_mouse_position())
+	self.skew = (lerp(skew, direction.x * 0.15, 1-pow(0.02, delta)))
 
 
 func _physics_process(delta):
