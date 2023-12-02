@@ -1,12 +1,14 @@
+Node2D
+Node
+Label
+Button
+Panel
 CanvasLayer
 ProgressBar
 Control
 CollisionShape2D
 Area2D
 StaticBody2D
-Node2D
 GPUParticles2D
 TileMap
-Node
 Camera2D
-CharacterBody2D

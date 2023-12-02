@@ -1,13 +1,16 @@
-res://World.tscn
+res://MainMenu/MainMenu.tscn
 res://Map/Tree/tree.gdshader
+res://Theme/MainMenuTheme.tres
 res://Enemies/normal/enemy_normal.tscn
 res://test.tscn
 res://tile_map.tscn
 res://Player/player.tscn
 res://Map/Tree/tree.tscn
 res://Player/bullet.tscn
-res://Player/player.gd
-res://Enemies/normal/Enemy Normal.gd
-res://Player/Bullet.gd
+res://World.tscn
+res://UI/Panels/Panel1.tres
+res://UI/Panels/Panel1_Unfocused.tres
+res://UI/Panels/Panel1_Pressed.tres
 res://World.gd
-res://House/house.gd
+res://singletones/game_manager.gd
+res://MainMenu/main_menu.gd

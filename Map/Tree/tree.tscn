@@ -52,6 +52,8 @@ damping_curve = SubResource("CurveTexture_31g7n")
 color_ramp = SubResource("GradientTexture1D_a3i76")
 
 [node name="Tree" type="StaticBody2D"]
+z_as_relative = false
+y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)

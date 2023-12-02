@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://e2taeijhxlq5"]
+
+[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_q4nbh"]
+[ext_resource type="FontFile" uid="uid://bvdys5l7dhjkj" path="res://Theme/Fonts/LitterLover2.ttf" id="1_y8tjo"]
+[ext_resource type="Theme" uid="uid://bvry5pcx5qldm" path="res://Theme/MainMenuTheme.tres" id="2_1x7fp"]
+
+[sub_resource type="GDScript" id="GDScript_h1q38"]
+script/source = "extends Button
+
+
+func _on_pressed():
+	get_tree().change_scene_to_file(\"res://World.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_c1eco"]
+script/source = "extends Button
+
+func _on_pressed():
+	$\"..\".hide()
+	pass # Replace with function body.
+"
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q4nbh")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = -1.0
+offset_right = 264.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_y8tjo")
+theme_override_font_sizes/font_size = 36
+text = "The Last Twilight"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -25.0
+offset_right = 184.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1x7fp")
+text = "Play The Game"
+script = SubResource("GDScript_h1q38")
+
+[node name="CongratsPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -106.0
+offset_right = 280.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1x7fp")
+
+[node name="Label" type="Label" parent="CongratsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congrats!!!
+You have survived through X minute/s and X second/s of the night.
+(That's a great score!!!)
+It sure was your Last Twilight."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CongratsPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -56.0
+offset_right = 96.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Close"
+script = SubResource("GDScript_c1eco")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="CongratsPanel/Button" to="CongratsPanel/Button" method="_on_pressed"]
