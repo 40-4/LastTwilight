@@ -1,14 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://sy8m5tphi3kq"]
+[gd_scene load_steps=18 format=3 uid="uid://sy8m5tphi3kq"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_bttde"]
 [ext_resource type="Script" path="res://enemy_spawn.gd" id="2_jwmd4"]
-[ext_resource type="Texture2D" uid="uid://cbrbolis624gu" path="res://House/HouseTilemap.png" id="3_o0sod"]
+[ext_resource type="Texture2D" uid="uid://biomy5efsaq2a" path="res://House/HouseTilemap.png" id="3_o0sod"]
 [ext_resource type="Texture2D" uid="uid://ch42b3781hx6u" path="res://Map/GroundTileset.png" id="4_lvebw"]
 [ext_resource type="PackedScene" uid="uid://cyjfnksv54alu" path="res://Player/player.tscn" id="5_o33ci"]
 [ext_resource type="Script" path="res://House/house.gd" id="7_2xldh"]
 [ext_resource type="Theme" uid="uid://c2k1be4tg82t5" path="res://Theme/MainMenuTheme.tres" id="8_3dwe1"]
 [ext_resource type="PackedScene" uid="uid://pofb303hltui" path="res://Map/Tree/tree.tscn" id="9_f2kmt"]
 [ext_resource type="Texture2D" uid="uid://buf2r3tysctoj" path="res://Light/light.png" id="10_qeh8s"]
+[ext_resource type="PackedScene" uid="uid://egtajj66l0jp" path="res://Light/light.tscn" id="11_5h7kc"]
 [ext_resource type="FontFile" uid="uid://dwabgtpgr2a1c" path="res://Theme/Fonts/LitterLover2-Bold.ttf" id="11_dnweq"]
 
 [sub_resource type="Curve" id="Curve_tqahc"]
@@ -242,6 +243,21 @@ position = Vector2(472, 768)
 [node name="Tree26" parent="TileMap/Trees" instance=ExtResource("9_f2kmt")]
 position = Vector2(896, 520)
 
+[node name="Tree27" parent="TileMap/Trees" instance=ExtResource("9_f2kmt")]
+position = Vector2(-380, 1010)
+
+[node name="Tree29" parent="TileMap/Trees" instance=ExtResource("9_f2kmt")]
+position = Vector2(566, -562)
+
+[node name="Tree30" parent="TileMap/Trees" instance=ExtResource("9_f2kmt")]
+position = Vector2(-785, 320)
+
+[node name="Tree28" parent="TileMap/Trees" instance=ExtResource("9_f2kmt")]
+position = Vector2(-829, -442)
+
+[node name="Tree31" parent="TileMap/Trees" instance=ExtResource("9_f2kmt")]
+position = Vector2(-2418, 1136)
+
 [node name="Bullets" type="Node2D" parent="." groups=["bullets"]]
 z_as_relative = false
 
@@ -328,3 +344,33 @@ offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("11_dnweq")
 theme_override_font_sizes/font_size = 30
 text = "0"
+
+[node name="Light" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(52, 85)
+
+[node name="Light2" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(-32, 115)
+
+[node name="Light3" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(179, 99)
+
+[node name="Light4" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(-165, 73)
+
+[node name="Light5" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(-232, -42)
+
+[node name="Light6" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(142, -50)
+
+[node name="Light7" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(-138, -122)
+
+[node name="Light8" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(14, -177)
+
+[node name="Light9" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(-117, -161)
+
+[node name="Light10" parent="." instance=ExtResource("11_5h7kc")]
+position = Vector2(-260, -105)

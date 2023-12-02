@@ -1,17 +1,10 @@
 res://Player/player.tscn
-res://node.tscn
-res://Player/UI/menu.tscn
-res://World.tscn
-res://singletones/global_variables.tscn
-res://Player/player.gd
-res://Enemies/normal/enemy_normal.tscn
-res://Enemies/normal/Enemy Normal.gd
-res://Totems/totem_of_destruction.gd
 res://UI/Panels/Panel1.tres
 res://UI/Panels/Panel1_Unfocused.tres
 res://UI/Panels/Panel1_Pressed.tres
 res://Theme/MainMenuTheme.tres
-res://singletones/global_variables.gd
-res://Light/light.tscn
-res://Light/light.gd
-res://World.gd
+res://node.tscn
+res://Player/UI/menu.tscn
+res://World.tscn
+res://singletones/global_variables.tscn
+res://Enemies/normal/enemy_normal.tscn
