@@ -10,6 +10,8 @@ radius = 16.0
 radius = 24.0
 
 [node name="Enemy Normal" type="CharacterBody2D" groups=["Enemies"]]
+z_as_relative = false
+y_sort_enabled = true
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_vv1o3")

@@ -11,19 +11,21 @@ config_version=5
 [application]
 
 config/name="Last Twilight"
-run/main_scene="res://node.tscn"
+run/main_scene="res://MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GlobalVariables="*res://singletones/global_variables.tscn"
+GameManager="*res://singletones/game_manager.gd"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="canvas_items"
+window/main_scene="res://node.tscn"
 
 [input]
 
