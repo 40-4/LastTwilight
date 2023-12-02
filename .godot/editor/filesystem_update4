@@ -2,3 +2,10 @@ res://enemy_spawn.gd
 res://Player/player.gd
 res://node.tscn
 res://Player/player.tscn
+res://singletones/global_variables.gd
+res://totemy/totem_base.tscn
+res://singletones/global_variables.tscn
+res://CanvasLayer.gd
+res://Player/UI/menu.tscn
+res://totemy/totem1.tscn
+res://totemy/totem3.tscn

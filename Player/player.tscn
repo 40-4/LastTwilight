@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cyjfnksv54alu"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_wosn6"]
-[ext_resource type="Texture2D" path="res://Player/Player_Idle.png" id="2_cdgk1"]
-[ext_resource type="Texture2D" path="res://Player/Book.png" id="3_3bdk6"]
+[ext_resource type="Texture2D" uid="uid://bvjvahqp6w0wn" path="res://Player/Player_Idle.png" id="2_cdgk1"]
+[ext_resource type="Texture2D" uid="uid://bggwr3wsgth7s" path="res://Player/Book.png" id="3_3bdk6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u1g2m"]
 radius = 12.0

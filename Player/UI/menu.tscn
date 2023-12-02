@@ -1,0 +1,181 @@
+[gd_scene load_steps=11 format=3 uid="uid://hnckhy4kpfrp"]
+
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="1_134eb"]
+[ext_resource type="Texture2D" uid="uid://d32bmpo23t7v1" path="res://Player/UI/path1.png" id="2_q72f1"]
+[ext_resource type="Texture2D" uid="uid://c81xw2lwvhn84" path="res://Player/UI/totems_sprites/Totem_of_Light_Presentation.png" id="3_hyn6m"]
+[ext_resource type="Texture2D" uid="uid://cix4k0x3o3hov" path="res://Player/UI/totems_sprites/Star_Light_Presentation.png" id="4_sh8yg"]
+[ext_resource type="Texture2D" uid="uid://crnrrmdj0wfnm" path="res://Player/UI/totems_sprites/Totem_of_Power_Presentation.png" id="5_br74n"]
+[ext_resource type="Texture2D" uid="uid://dwtkv4786ykgv" path="res://Player/UI/totems_sprites/Totem_of_Hemorrhage_Presentation.png" id="6_8oek3"]
+[ext_resource type="Texture2D" uid="uid://bh5qbc40lq6b" path="res://Player/UI/totems_sprites/Totem_of_Destruction_Presentation.png" id="7_0qn72"]
+[ext_resource type="Texture2D" uid="uid://dqywu7h8m3j2b" path="res://Player/UI/totems_sprites/Totem_of_Pain_Presentaation.png" id="8_myodx"]
+[ext_resource type="Texture2D" uid="uid://dgherii1w3ror" path="res://Player/UI/totems_sprites/Totem_of_Coldness_Presentation.png" id="9_ubqfb"]
+[ext_resource type="Texture2D" uid="uid://b2ch2twag45jx" path="res://Player/UI/totems_sprites/Totem_of_Reduction_Presentation.png" id="10_jf1g7"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_134eb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_q72f1")
+
+[node name="texts" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/texts"]
+layout_mode = 0
+offset_left = 725.0
+offset_top = 27.0
+offset_right = 927.0
+offset_bottom = 500.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/texts/VBoxContainer"]
+layout_mode = 2
+text = "aaaa"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="Control/texts/VBoxContainer"]
+custom_minimum_size = Vector2(50, 2.08165e-12)
+layout_mode = 2
+text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/texts/VBoxContainer"]
+layout_mode = 2
+text = "Cost: 10 esence"
+horizontal_alignment = 1
+
+[node name="buttons" type="Node" parent="."]
+
+[node name="TextureButton1" type="TextureButton" parent="buttons"]
+visible = false
+offset_left = 468.0
+offset_top = 285.0
+offset_right = 508.0
+offset_bottom = 325.0
+texture_normal = ExtResource("3_hyn6m")
+
+[node name="TextureButton2" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_sh8yg")
+
+[node name="TextureButton3" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton4" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("6_8oek3")
+
+[node name="TextureButton5" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("7_0qn72")
+
+[node name="TextureButton6" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("8_myodx")
+
+[node name="TextureButton7" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("9_ubqfb")
+
+[node name="TextureButton8" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("10_jf1g7")
+
+[node name="TextureButton9" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton10" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton11" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton12" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton13" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton14" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[node name="TextureButton15" type="TextureButton" parent="buttons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_br74n")
+
+[connection signal="mouse_entered" from="buttons/TextureButton1" to="." method="_on_texture_button_mouse_entered" binds= [1]]
+[connection signal="mouse_entered" from="buttons/TextureButton2" to="." method="_on_texture_button_mouse_entered" binds= [2]]
+[connection signal="mouse_entered" from="buttons/TextureButton3" to="." method="_on_texture_button_mouse_entered" binds= [3]]
+[connection signal="mouse_entered" from="buttons/TextureButton4" to="." method="_on_texture_button_mouse_entered" binds= [4]]
+[connection signal="mouse_entered" from="buttons/TextureButton5" to="." method="_on_texture_button_mouse_entered" binds= [5]]
+[connection signal="mouse_entered" from="buttons/TextureButton6" to="." method="_on_texture_button_mouse_entered" binds= [6]]
+[connection signal="mouse_entered" from="buttons/TextureButton7" to="." method="_on_texture_button_mouse_entered" binds= [7]]
+[connection signal="mouse_entered" from="buttons/TextureButton8" to="." method="_on_texture_button_mouse_entered" binds= [8]]
+[connection signal="mouse_entered" from="buttons/TextureButton9" to="." method="_on_texture_button_mouse_entered" binds= [9]]
+[connection signal="mouse_entered" from="buttons/TextureButton10" to="." method="_on_texture_button_mouse_entered" binds= [10]]
+[connection signal="mouse_entered" from="buttons/TextureButton11" to="." method="_on_texture_button_mouse_entered" binds= [11]]
+[connection signal="mouse_entered" from="buttons/TextureButton12" to="." method="_on_texture_button_mouse_entered" binds= [12]]
+[connection signal="mouse_entered" from="buttons/TextureButton13" to="." method="_on_texture_button_mouse_entered" binds= [13]]
+[connection signal="mouse_entered" from="buttons/TextureButton14" to="." method="_on_texture_button_mouse_entered" binds= [14]]
+[connection signal="mouse_entered" from="buttons/TextureButton15" to="." method="_on_texture_button_mouse_entered" binds= [15]]
