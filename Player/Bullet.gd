@@ -16,6 +16,10 @@ func _physics_process(delta):
 	###FIXME: DAMAGE
 	if get_overlapping_bodies():
 		for ob in get_overlapping_bodies():
-			if ob.has_meta("type") && ob.get_meta("type") == "enemy":
-				ob.damage(5)
+			if ob.has_meta("type"):
+				if ob.get_meta("type") == "enemy":
+					ob.damage(5)
+				if ob.get_meta("type") != "player":
+					queue_free()
+			else:
 				queue_free()

@@ -9,3 +9,5 @@ res://Player/bullet.tscn
 res://Player/player.gd
 res://Enemies/normal/Enemy Normal.gd
 res://Player/Bullet.gd
+res://World.gd
+res://House/house.gd

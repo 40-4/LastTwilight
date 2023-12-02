@@ -36,9 +36,16 @@ func _physics_process(delta):
 	
 	velocity = direction * speed
 	
+	try_to_attack()
+	
 	move_and_slide()
-	
-	
+
+func try_to_attack():
+	for current_target in %AttackArea.get_overlapping_bodies():
+		if current_target != null && current_target.has_meta("type") && (current_target.get_meta("type") == "player" || current_target.get_meta("type") == "house") &&\
+				attack_cooldown <= 0:
+			attack_cooldown = attack_cooldown_base
+			attack(current_target)
 
 func look_for_targets() -> Vector2:
 	var targets = get_tree().get_nodes_in_group("Targettable")
@@ -57,19 +64,13 @@ func look_for_targets() -> Vector2:
 			if self.get_global_position().distance_to(target.get_global_position()) < self.get_global_position().distance_to(current_target.get_global_position()):
 				current_target = target
 		
-		
-	if current_target != null && current_target.has_meta("type") && current_target.get_meta("type") == "player" &&\
-			attack_cooldown <= 0:
-		if self.get_global_position().distance_to(current_target.get_global_position()) <= attack_range:
-			attack_cooldown = attack_cooldown_base
-			attack(current_target)
-		
 	if current_target == null:
 		return Vector2.ZERO #FIXME:Koordy światła/domku
 	else:
 		return current_target.get_global_position()
 
 func attack(target):
+	print("I'm currently destroying " + target.name)
 	target.deal_damage(5.0)
 
 func damage(amount : float, effect : Array = []):
