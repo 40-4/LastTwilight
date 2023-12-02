@@ -83,6 +83,10 @@ func dash():
 	is_dashing = dash_duration
 	dash_cooldown = dash_cooldown_base + dash_duration
 
+func deal_damage(amount : float):
+	hp -= amount
+	
+
 func attack():
 	attack_cooldown = attack_cooldown_base
 	
@@ -90,7 +94,4 @@ func attack():
 	i.direction = pivot_book.global_position.direction_to(book.global_position)
 	i.position = book.global_position
 	world.add_child(i)
-	
-	
-	print("atak")
 	###SDFSDFSDFSDFSDFSDFSDFSDFSDF NIE PSUĆ PLS 

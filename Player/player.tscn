@@ -109,6 +109,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Player", "Targettable"]]
 script = ExtResource("1_wosn6")
+metadata/type = "player"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_u1g2m")

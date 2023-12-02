@@ -12,6 +12,10 @@ var max_hp : float = 20.0
 var hp : float
 
 var range: float = 200.0
+var attack_range: float = 32.0
+
+var attack_cooldown : float = 0
+var attack_cooldown_base : float = 0.5
 
 var speed : float = 100.0
 
@@ -24,6 +28,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	attack_cooldown =  max(attack_cooldown - delta, 0)
+	
 	target = look_for_targets()
 	
 	var direction = (target - self.get_global_position()).normalized()
@@ -51,11 +57,20 @@ func look_for_targets() -> Vector2:
 			if self.get_global_position().distance_to(target.get_global_position()) < self.get_global_position().distance_to(current_target.get_global_position()):
 				current_target = target
 		
+		
+	if current_target != null && current_target.has_meta("type") && current_target.get_meta("type") == "player" &&\
+			attack_cooldown <= 0:
+		if self.get_global_position().distance_to(current_target.get_global_position()) <= attack_range:
+			attack_cooldown = attack_cooldown_base
+			attack(current_target)
+		
 	if current_target == null:
 		return Vector2.ZERO #FIXME:Koordy światła/domku
 	else:
 		return current_target.get_global_position()
 
+func attack(target):
+	target.deal_damage(5.0)
 
 func damage(amount : float, effect : Array = []):
 	hp -= amount
