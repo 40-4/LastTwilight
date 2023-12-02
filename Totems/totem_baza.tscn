@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cknymgfjbyhcg"]
+
+[ext_resource type="Script" path="res://Totems/Totem_baza.gd" id="1_vx44u"]
+[ext_resource type="Texture2D" uid="uid://c10tsprgqw0vu" path="res://icon.svg" id="2_mxf4j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnnv3"]
+radius = 16.0
+
+[node name="Totem_baza" type="Area2D"]
+script = ExtResource("1_vx44u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mnnv3")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_mxf4j")

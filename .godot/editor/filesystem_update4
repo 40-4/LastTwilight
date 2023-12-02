@@ -1,8 +1,6 @@
-res://Player/player.tscn
 res://node.tscn
-res://Player/UI/menu.tscn
-res://Player/player.gd
 res://World.tscn
-res://CanvasLayer.gd
-res://Enemies/normal/Enemy Normal.gd
-res://World.gd
+res://Totems/Totem_baza.gd
+res://Totems/totem_baza.tscn
+res://Light/light.gd
+res://Light/light.tscn
