@@ -59,5 +59,5 @@ func look_for_targets() -> Vector2:
 
 func damage(amount : float, effect : Array = []):
 	hp -= amount
-	if hp < 0:
+	if hp <= 0:
 		queue_free()

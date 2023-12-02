@@ -87,7 +87,7 @@ func attack():
 	attack_cooldown = attack_cooldown_base
 	
 	var i = bullet.instantiate()
-	i.direction = (self.global_position + pivot_book.position).direction_to(book.global_position)
+	i.direction = pivot_book.global_position.direction_to(book.global_position)
 	i.position = book.global_position
 	world.add_child(i)
 	
