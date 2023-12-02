@@ -1,14 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701466889
-icon.svg::CompressedTexture2D::6650547327386204914::1701451795::1701451807::1::::<><>::
-test.tscn::PackedScene::9113384123415010131::1701465975::0::1::::<><>::uid://cyjfnksv54alu::::res://Player/player.tscn
-::res://Map/::1701466610
+::res://::1701476488
+icon.svg::CompressedTexture2D::6650547327386204914::1701451795::1701471681::1::::<><>::
+test.tscn::PackedScene::9113384123415010131::1701474742::0::1::::<><>::res://Map/Worldgen.gd<>uid://cyjfnksv54alu::::res://Player/player.tscn
+::res://Enemies/::1701476488
+Enemy Normal.gd::GDScript::-1::1701476486::0::1::::<>CharacterBody2D<>::
+::res://Enemies/normal/::1701476488
+enemy_normal.tscn::PackedScene::4566462954961234378::1701476490::0::1::::<><>::res://Enemies/Enemy Normal.gd<>uid://c10tsprgqw0vu::::res://icon.svg
+::res://Map/::1701470479
 GroundTileset.png::CompressedTexture2D::5325672893940723590::1701466585::1701466610::1::::<><>::
-::res://Player/::1701466610
+Worldgen.gd::GDScript::-1::1701470479::0::1::::<>Node<>::
+::res://Player/::1701474824
 Book.png::CompressedTexture2D::2821307649849012262::1701466585::1701466610::1::::<><>::
-player.gd::GDScript::-1::1701465975::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6476280368805468402::1701465975::0::1::::<><>::res://Player/player.gd<>uid://bvjvahqp6w0wn::::res://Player/Player_Idle.png
+player.gd::GDScript::-1::1701474742::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6476280368805468402::1701474824::0::1::::<><>::res://Player/player.gd<>uid://bvjvahqp6w0wn::::res://Player/Player_Idle.png<>uid://bggwr3wsgth7s::::res://Player/Book.png
 PlayerParticle.png::CompressedTexture2D::942036023792935119::1701463546::1701463562::1::::<><>::
 Player_Idle.png::CompressedTexture2D::3880241249830588637::1701463546::1701463562::1::::<><>::
 ::res://Singletones/::1701454757
-::res://Theme/::1701454764
+::res://Theme/::1701470664
+::res://Theme/Fonts/::1701470913
+LitterLover2-Bold.ttf::FontFile::8703489064284322782::1534172156::1701470913::1::::<><>::
+LitterLover2.ttf::FontFile::3868070479622225065::1534172350::1701470913::1::::<><>::
+LitterLover-Bold.ttf::FontFile::8472990922894388516::1534172237::1701470913::1::::<><>::
+LitterLover.ttf::FontFile::7498021360887144387::1534172427::1701470913::1::::<><>::

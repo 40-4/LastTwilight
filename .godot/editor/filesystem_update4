@@ -1,3 +1,7 @@
 res://Player/player.tscn
 res://Player/player.gd
 res://test.tscn
+res://Map/Worldgen.gd
+res://Enemy Normal.gd
+res://Enemies/normal/enemy_normal.tscn
+res://Enemies/normal/Enemy Normal.gd

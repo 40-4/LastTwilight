@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
 ###Variables
+var max_hp : int = 3
+var hp : int
+
+var damage
 
 
 
@@ -10,6 +14,8 @@ var speed : float = 150.0 #TODO: Acceleration
 var dash_speed : float = 450.0
 var dash_duration : float = 0.3
 var dash_direction : Vector2 = Vector2.ZERO
+var dash_cooldown : float = 0
+var dash_cooldown_base : float = 2.0
 var is_dashing : float = 0
 
 ###Onready variables
@@ -30,17 +36,17 @@ func _process(delta):
 
 
 func _physics_process(delta):
+	dash_cooldown = max(dash_cooldown - delta, 0)
 	#setting temps variables
 	var current_speed : float = 0 
 	#checking dashes:
-	if Input.is_action_just_pressed("move_dash"):
+	if Input.is_action_just_pressed("move_dash") and dash_cooldown == 0:
 		dash()
 	#checking if player is dashing ect.
 	if is_dashing == 0:
 		#getting_movement
 		current_speed = speed
 		direction = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
-		print(direction)
 	#handling dashes
 	else:
 		current_speed = dash_speed
@@ -58,3 +64,4 @@ func _physics_process(delta):
 func dash():
 	dash_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
 	is_dashing = dash_duration
+	dash_cooldown = dash_cooldown_base + dash_duration
