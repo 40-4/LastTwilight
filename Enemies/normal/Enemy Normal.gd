@@ -76,4 +76,7 @@ func attack(target):
 func damage(amount : float, effect : Array = []):
 	hp -= amount
 	if hp <= 0:
+		var light = load("res://Light/light.tscn").instantiate()
+		light.position = position
+		get_tree().get_first_node_in_group("tilemap").add_child(light)
 		queue_free()

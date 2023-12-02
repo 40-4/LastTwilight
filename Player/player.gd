@@ -51,7 +51,13 @@ func _process(delta):
 		var build_scene = load("res://Player/UI/menu.tscn")
 		self.add_child(build_scene.instantiate())
 	elif Input.is_action_just_pressed("build_mode") && !not_building:
-		if $Menu.totem_hovered != 0:
+		var cena
+		if $Menu.totem_hovered <= 2:
+			cena = 10
+		else:
+			cena = 20
+		if $Menu.totem_hovered != 0 && GlobalVariables.light >= cena:
+			GlobalVariables.light -= cena
 			var totem_scene = load(GlobalVariables.totems[$Menu.totem_hovered])
 			var new_totem= totem_scene.instantiate()
 			new_totem.position = position

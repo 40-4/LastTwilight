@@ -28,6 +28,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$UI/lights/Label.text = str(GlobalVariables.light)
 	if !was_message_displayed && time > -2:
 		var position_tween = create_tween()
 		var rotation_tween = create_tween()

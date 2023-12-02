@@ -1,14 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://sy8m5tphi3kq"]
+[gd_scene load_steps=18 format=3 uid="uid://sy8m5tphi3kq"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_bttde"]
 [ext_resource type="Script" path="res://enemy_spawn.gd" id="2_jwmd4"]
-[ext_resource type="Texture2D" uid="uid://biomy5efsaq2a" path="res://House/HouseTilemap.png" id="3_o0sod"]
+[ext_resource type="Texture2D" uid="uid://cbrbolis624gu" path="res://House/HouseTilemap.png" id="3_o0sod"]
 [ext_resource type="Texture2D" uid="uid://ch42b3781hx6u" path="res://Map/GroundTileset.png" id="4_lvebw"]
 [ext_resource type="PackedScene" uid="uid://cyjfnksv54alu" path="res://Player/player.tscn" id="5_o33ci"]
 [ext_resource type="PackedScene" uid="uid://b6ca8ihrg78d7" path="res://Enemies/normal/enemy_normal.tscn" id="6_hsgyg"]
 [ext_resource type="Script" path="res://House/house.gd" id="7_2xldh"]
-[ext_resource type="Theme" uid="uid://bvry5pcx5qldm" path="res://Theme/MainMenuTheme.tres" id="8_3dwe1"]
+[ext_resource type="Theme" uid="uid://c2k1be4tg82t5" path="res://Theme/MainMenuTheme.tres" id="8_3dwe1"]
 [ext_resource type="PackedScene" uid="uid://pofb303hltui" path="res://Map/Tree/tree.tscn" id="9_f2kmt"]
+[ext_resource type="Texture2D" uid="uid://buf2r3tysctoj" path="res://Light/light.png" id="10_qeh8s"]
+[ext_resource type="FontFile" uid="uid://dwabgtpgr2a1c" path="res://Theme/Fonts/LitterLover2-Bold.ttf" id="11_dnweq"]
 
 [sub_resource type="Curve" id="Curve_tqahc"]
 _data = [Vector2(0, 0.151215), 0.626425, 0.0720567, 0, 0, Vector2(0.321192, 0.228378), 0.0, 0.0, 0, 0, Vector2(0.390728, 0.511306), 1.24359, 1.24359, 0, 0, Vector2(0.917219, 0.647258), 0.968436, 0.968436, 0, 0, Vector2(1, 1), -0.273965, -0.273965, 0, 0]
@@ -306,3 +308,27 @@ theme_override_font_sizes/font_size = 32
 text = "The Sun is Setting"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="lights" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 824.0
+offset_top = 8.0
+offset_right = 912.0
+offset_bottom = 48.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/lights"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_qeh8s")
+
+[node name="Label" type="Label" parent="UI/lights"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("11_dnweq")
+theme_override_font_sizes/font_size = 30
+text = "0"

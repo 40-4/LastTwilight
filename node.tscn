@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://enemy_spawn.gd" id="1_8ro4x"]
 [ext_resource type="Texture2D" uid="uid://ch42b3781hx6u" path="res://Map/GroundTileset.png" id="1_lv83u"]
-[ext_resource type="Texture2D" uid="uid://biomy5efsaq2a" path="res://House/HouseTilemap.png" id="2_frf5l"]
+[ext_resource type="Texture2D" uid="uid://cbrbolis624gu" path="res://House/HouseTilemap.png" id="2_frf5l"]
 [ext_resource type="Texture2D" uid="uid://c10tsprgqw0vu" path="res://icon.svg" id="4_fc4y0"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_a30nv"]
