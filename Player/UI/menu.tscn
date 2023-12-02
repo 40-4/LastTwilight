@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dqywu7h8m3j2b" path="res://Player/UI/totems_sprites/Totem_of_Pain_Presentaation.png" id="8_myodx"]
 [ext_resource type="Texture2D" uid="uid://dgherii1w3ror" path="res://Player/UI/totems_sprites/Totem_of_Coldness_Presentation.png" id="9_ubqfb"]
 [ext_resource type="Texture2D" uid="uid://b2ch2twag45jx" path="res://Player/UI/totems_sprites/Totem_of_Reduction_Presentation.png" id="10_jf1g7"]
-[ext_resource type="Texture2D" uid="uid://bdfirlbej72pc" path="res://Player/UI/totems_sprites/Totem_of_Stability_Presentation.png" id="11_1lm45"]
+[ext_resource type="Texture2D" path="res://Player/UI/totems_sprites/Totem_of_Stability_Presentation.png" id="11_1lm45"]
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_134eb")
