@@ -1,5 +1,5 @@
-Label
 TextureRect
+Label
 Control
 AnimatedSprite2D
 CanvasModulate
@@ -12,4 +12,3 @@ StaticBody2D
 TileMap
 Node
 Camera2D
-CharacterBody2D

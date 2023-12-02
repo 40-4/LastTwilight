@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://e2taeijhxlq5"]
+[gd_scene load_steps=7 format=3 uid="uid://e2taeijhxlq5"]
 
 [ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_q4nbh"]
 [ext_resource type="FontFile" uid="uid://bvdys5l7dhjkj" path="res://Theme/Fonts/LitterLover2.ttf" id="1_y8tjo"]
-[ext_resource type="Theme" uid="uid://bvry5pcx5qldm" path="res://Theme/MainMenuTheme.tres" id="2_1x7fp"]
+[ext_resource type="Theme" uid="uid://c2k1be4tg82t5" path="res://Theme/MainMenuTheme.tres" id="2_1x7fp"]
+[ext_resource type="Texture2D" uid="uid://cd705i8r63xbi" path="res://MainMenu/Hackathon-export.png" id="4_jm0y7"]
 
 [sub_resource type="GDScript" id="GDScript_h1q38"]
 script/source = "extends Button
@@ -28,6 +29,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q4nbh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_jm0y7")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.504
+anchor_right = 0.5
+anchor_bottom = 0.504
+offset_left = -184.0
+offset_top = 39.84
+offset_right = 179.0
+offset_bottom = 150.84
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_y8tjo")
+theme_override_font_sizes/font_size = 16
+text = "Move - WSAD
+Shoot - LMB
+Build - RMB then RMB on an icon to weave a totem
+
+
+The font - Litter Lover by fontenddev.com"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -63,6 +99,7 @@ text = "Play The Game"
 script = SubResource("GDScript_h1q38")
 
 [node name="CongratsPanel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

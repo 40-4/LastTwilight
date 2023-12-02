@@ -1,18 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701524123
+::res://::1701526649
 CanvasLayer.gd::GDScript::-1::1701520501::0::1::::<>CanvasLayer<>::
 enemy_spawn.gd::GDScript::-1::1701522820::0::1::::<>Node<>::
+export_presets.cfg::TextFile::-1::1701526554::0::1::::<><>::
 icon.svg::CompressedTexture2D::6650547327386204914::1701462273::1701494078::1::::<><>::
-node.tscn::PackedScene::5866758581080304738::1701524073::0::1::::<><>::res://enemy_spawn.gd<>uid://ch42b3781hx6u::::res://Map/GroundTileset.png<>uid://cbrbolis624gu::::res://House/HouseTilemap.png<>uid://c10tsprgqw0vu::::res://icon.svg
+node.tscn::PackedScene::5866758581080304738::1701525825::0::1::::<><>::res://enemy_spawn.gd<>uid://ch42b3781hx6u::::res://Map/GroundTileset.png<>uid://biomy5efsaq2a::::res://House/HouseTilemap.png<>uid://c10tsprgqw0vu::::res://icon.svg
 test.tscn::PackedScene::9113384123415010131::1701520045::0::1::::<><>::res://Map/Worldgen.gd<>uid://cyjfnksv54alu::::res://Player/player.tscn<>uid://b6ca8ihrg78d7::::res://Enemies/normal/enemy_normal.tscn
 tile_map.tscn::PackedScene::7058181604728741329::1701520046::0::1::::<><>::uid://ch42b3781hx6u::::res://Map/GroundTileset.png
 World.gd::GDScript::-1::1701524073::0::1::::<>Node<>::
-World.tscn::PackedScene::1314970947613190692::1701524095::0::1::::<><>::res://World.gd<>res://enemy_spawn.gd<>uid://cbrbolis624gu::::res://House/HouseTilemap.png<>uid://ch42b3781hx6u::::res://Map/GroundTileset.png<>uid://cyjfnksv54alu::::res://Player/player.tscn<>res://House/house.gd<>uid://c2k1be4tg82t5::::res://Theme/MainMenuTheme.tres<>uid://pofb303hltui::::res://Map/Tree/tree.tscn<>uid://buf2r3tysctoj::::res://Light/light.png<>uid://dwabgtpgr2a1c::::res://Theme/Fonts/LitterLover2-Bold.ttf
+World.tscn::PackedScene::1314970947613190692::1701525826::0::1::::<><>::res://World.gd<>res://enemy_spawn.gd<>uid://biomy5efsaq2a::::res://House/HouseTilemap.png<>uid://ch42b3781hx6u::::res://Map/GroundTileset.png<>uid://cyjfnksv54alu::::res://Player/player.tscn<>res://House/house.gd<>uid://c2k1be4tg82t5::::res://Theme/MainMenuTheme.tres<>uid://pofb303hltui::::res://Map/Tree/tree.tscn<>uid://buf2r3tysctoj::::res://Light/light.png<>uid://egtajj66l0jp::::res://Light/light.tscn<>uid://dwabgtpgr2a1c::::res://Theme/Fonts/LitterLover2-Bold.ttf
 ::res://Enemies/::1701521392
-::res://Enemies/normal/::1701524073
+::res://Enemies/normal/::1701525827
 Enemy Normal.gd::GDScript::-1::1701524073::0::1::::<>CharacterBody2D<>::
 enemy_fuzzy.tscn::PackedScene::6881477010585751479::1701522825::0::1::::<><>::res://Enemies/normal/Enemy Normal.gd<>uid://drj1437cxijnw::::res://Enemies/normal/ShadowCreatureGowno2.png<>uid://dwcasauaa700e::::res://Enemies/normal/Furball.png
-enemy_normal.tscn::PackedScene::4566462954961234378::1701523910::0::1::::<><>::res://Enemies/normal/Enemy Normal.gd<>uid://drj1437cxijnw::::res://Enemies/normal/ShadowCreatureGowno2.png
+enemy_normal.tscn::PackedScene::4566462954961234378::1701525827::0::1::::<><>::res://Enemies/normal/Enemy Normal.gd<>uid://drj1437cxijnw::::res://Enemies/normal/ShadowCreatureGowno2.png
 Furball.png::CompressedTexture2D::8707577541811799098::1701522695::1701522695::1::::<><>::
 ShadowCreatureGowno2.png::CompressedTexture2D::8372683742757038948::1701521381::1701521392::1::::<><>::
 ::res://Engineer/::1701509249
@@ -26,8 +27,9 @@ HouseTilemap.png::CompressedTexture2D::2977605766452084630::1701477724::17015092
 light.gd::GDScript::-1::1701524073::0::1::::<>Marker2D<>::
 light.png::CompressedTexture2D::3802190663644818593::1701520501::1701520501::1::::<><>::
 light.tscn::PackedScene::294295752002828173::1701520501::0::1::::<><>::res://Light/light.gd<>uid://buf2r3tysctoj::::res://Light/light.png
-::res://MainMenu/::1701521386
-MainMenu.tscn::PackedScene::337647419645332658::1701520538::0::1::::<><>::res://MainMenu/main_menu.gd<>uid://bvdys5l7dhjkj::::res://Theme/Fonts/LitterLover2.ttf<>uid://bvry5pcx5qldm::::res://Theme/MainMenuTheme.tres
+::res://MainMenu/::1701526686
+Hackathon-export.png::CompressedTexture2D::5051039957046823222::1701526686::1701526686::1::::<><>::
+MainMenu.tscn::PackedScene::337647419645332658::1701526632::0::1::::<><>::res://MainMenu/main_menu.gd<>uid://bvdys5l7dhjkj::::res://Theme/Fonts/LitterLover2.ttf<>uid://c2k1be4tg82t5::::res://Theme/MainMenuTheme.tres
 main_menu.gd::GDScript::-1::1701521086::0::1::::<>Control<>::
 ::res://Map/::1701509249
 GroundTileset.png::CompressedTexture2D::5325672893940723590::1701465482::1701494077::1::::<><>::
@@ -38,17 +40,17 @@ tree.gdshader::Shader::-1::1701520463::0::1::::<><>::
 tree.tscn::PackedScene::1082040824440975492::1701520538::0::1::::<><>::uid://m1iflo3ql3m1::::res://Map/Tree/Tree_Log.png<>res://Map/Tree/tree.gdshader<>uid://yutjt2r6i7l5::::res://Map/Tree/Tree_Leaves.png<>uid://dsk6gytfdsctt::::res://Map/Tree/leaf.png
 Tree_Leaves.png::CompressedTexture2D::1726990537869232036::1701509249::1701509249::1::::<><>::
 Tree_Log.png::CompressedTexture2D::896435210851750778::1701509249::1701509249::1::::<><>::
-::res://Player/::1701524073
+::res://Player/::1701525825
 bolt.png::CompressedTexture2D::429899063173960161::1701509249::1701509249::1::::<><>::
 Book.png::CompressedTexture2D::2821307649849012262::1701466484::1701494077::1::::<><>::
 Bullet.gd::GDScript::-1::1701520501::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::1954600655360932717::1701520501::0::1::::<><>::res://Player/Bullet.gd<>uid://geim0hvg0gjp::::res://Player/bolt.png
 player.gd::GDScript::-1::1701524073::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6476280368805468402::1701522824::0::1::::<><>::res://Player/player.gd<>uid://bvjvahqp6w0wn::::res://Player/Player_Idle.png<>uid://bggwr3wsgth7s::::res://Player/Book.png
+player.tscn::PackedScene::6476280368805468402::1701525825::0::1::::<><>::res://Player/player.gd<>uid://bvjvahqp6w0wn::::res://Player/Player_Idle.png<>uid://bggwr3wsgth7s::::res://Player/Book.png
 PlayerParticle.png::CompressedTexture2D::942036023792935119::1701463282::1701494077::1::::<><>::
 Player_Idle.png::CompressedTexture2D::3880241249830588637::1701461933::1701494077::1::::<><>::
-::res://Player/UI/::1701524073
-menu.tscn::PackedScene::518298514263929245::1701524073::0::1::::<><>::res://CanvasLayer.gd<>uid://d32bmpo23t7v1::::res://Player/UI/path1.png<>uid://c81xw2lwvhn84::::res://Player/UI/totems_sprites/Totem_of_Light_Presentation.png<>uid://cix4k0x3o3hov::::res://Player/UI/totems_sprites/Star_Light_Presentation.png<>uid://crnrrmdj0wfnm::::res://Player/UI/totems_sprites/Totem_of_Power_Presentation.png<>uid://dwtkv4786ykgv::::res://Player/UI/totems_sprites/Totem_of_Hemorrhage_Presentation.png<>uid://bh5qbc40lq6b::::res://Player/UI/totems_sprites/Totem_of_Destruction_Presentation.png<>uid://dqywu7h8m3j2b::::res://Player/UI/totems_sprites/Totem_of_Pain_Presentaation.png<>uid://dgherii1w3ror::::res://Player/UI/totems_sprites/Totem_of_Coldness_Presentation.png<>uid://b2ch2twag45jx::::res://Player/UI/totems_sprites/Totem_of_Reduction_Presentation.png<>res://Player/UI/totems_sprites/Totem_of_Stability_Presentation.png
+::res://Player/UI/::1701525825
+menu.tscn::PackedScene::518298514263929245::1701525825::0::1::::<><>::res://CanvasLayer.gd<>uid://d32bmpo23t7v1::::res://Player/UI/path1.png<>uid://c81xw2lwvhn84::::res://Player/UI/totems_sprites/Totem_of_Light_Presentation.png<>uid://cix4k0x3o3hov::::res://Player/UI/totems_sprites/Star_Light_Presentation.png<>uid://crnrrmdj0wfnm::::res://Player/UI/totems_sprites/Totem_of_Power_Presentation.png<>uid://dwtkv4786ykgv::::res://Player/UI/totems_sprites/Totem_of_Hemorrhage_Presentation.png<>uid://bh5qbc40lq6b::::res://Player/UI/totems_sprites/Totem_of_Destruction_Presentation.png<>uid://dqywu7h8m3j2b::::res://Player/UI/totems_sprites/Totem_of_Pain_Presentaation.png<>uid://dgherii1w3ror::::res://Player/UI/totems_sprites/Totem_of_Coldness_Presentation.png<>uid://b2ch2twag45jx::::res://Player/UI/totems_sprites/Totem_of_Reduction_Presentation.png<>uid://bdfirlbej72pc::::res://Player/UI/totems_sprites/Totem_of_Stability_Presentation.png
 path1.png::CompressedTexture2D::9180370829565921436::1701509146::1701509146::1::::<><>::
 ::res://Player/UI/totems_sprites/::1701520501
 Star_Light_Presentation.png::CompressedTexture2D::5383612805469377293::1701509146::1701509146::1::::<><>::
@@ -61,12 +63,12 @@ Totem_of_Paralysis_Presentation.png::CompressedTexture2D::5127610493218913725::1
 Totem_of_Power_Presentation.png::CompressedTexture2D::5993951802766755962::1701509146::1701509146::1::::<><>::
 Totem_of_Reduction_Presentation.png::CompressedTexture2D::4286122484751435145::1701509146::1701509146::1::::<><>::
 Totem_of_Stability_Presentation.png::CompressedTexture2D::2607825777312726204::1701520501::1701520501::1::::<><>::
-::res://singletones/::1701524073
+::res://singletones/::1701525826
 game_manager.gd::GDScript::-1::1701520538::0::1::::<>Node<>::
 global_variables.gd::GDScript::-1::1701524073::0::1::::<>Node2D<>::
-global_variables.tscn::PackedScene::5639416416519942306::1701522824::0::1::::<><>::res://singletones/global_variables.gd
-::res://Theme/::1701524073
-MainMenuTheme.tres::Theme::6690164606524855832::1701524073::0::1::::<><>::uid://bhoraftp1fu1w::::res://UI/Panels/Panel1.tres<>uid://c5vr8psjbbvhv::::res://UI/Panels/Panel1_Unfocused.tres<>uid://bvdys5l7dhjkj::::res://Theme/Fonts/LitterLover2.ttf<>uid://61yd45k2n4bj::::res://UI/Panels/Panel1_Pressed.tres
+global_variables.tscn::PackedScene::5639416416519942306::1701525826::0::1::::<><>::res://singletones/global_variables.gd
+::res://Theme/::1701524130
+MainMenuTheme.tres::Theme::6690164606524855832::1701524130::0::1::::<><>::uid://bhoraftp1fu1w::::res://UI/Panels/Panel1.tres<>uid://c5vr8psjbbvhv::::res://UI/Panels/Panel1_Unfocused.tres<>uid://bvdys5l7dhjkj::::res://Theme/Fonts/LitterLover2.ttf<>uid://61yd45k2n4bj::::res://UI/Panels/Panel1_Pressed.tres
 ::res://Theme/Fonts/::1701494078
 LitterLover2-Bold.ttf::FontFile::8703489064284322782::1701494078::1701494078::1::::<><>::
 LitterLover2.ttf::FontFile::3868070479622225065::1701494078::1701494078::1::::<><>::
@@ -95,7 +97,7 @@ totem3.tscn::PackedScene::4731651676121419769::1701509146::0::1::::<><>::uid://8
 totem_base.tscn::PackedScene::2361092567752947424::1701509146::0::1::::<><>::uid://cix4k0x3o3hov::::res://Player/UI/totems_sprites/Star_Light_Presentation.png
 ::res://UI/::1701520538
 Panel.png::CompressedTexture2D::6413373496536340854::1701509249::1701509249::1::::<><>::
-::res://UI/Panels/::1701524073
-Panel1.tres::StyleBoxTexture::2907676359277725762::1701524073::0::1::::<><>::uid://cxmxlbdpptgqw::::res://UI/Panel.png
-Panel1_Pressed.tres::StyleBoxTexture::2230992109604934391::1701524073::0::1::::<><>::uid://cxmxlbdpptgqw::::res://UI/Panel.png
-Panel1_Unfocused.tres::StyleBoxTexture::6922950545505371023::1701524073::0::1::::<><>::uid://cxmxlbdpptgqw::::res://UI/Panel.png
+::res://UI/Panels/::1701524130
+Panel1.tres::StyleBoxTexture::2907676359277725762::1701524130::0::1::::<><>::uid://cxmxlbdpptgqw::::res://UI/Panel.png
+Panel1_Pressed.tres::StyleBoxTexture::2230992109604934391::1701524130::0::1::::<><>::uid://cxmxlbdpptgqw::::res://UI/Panel.png
+Panel1_Unfocused.tres::StyleBoxTexture::6922950545505371023::1701524130::0::1::::<><>::uid://cxmxlbdpptgqw::::res://UI/Panel.png

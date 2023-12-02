@@ -8,3 +8,4 @@ res://Player/UI/menu.tscn
 res://World.tscn
 res://singletones/global_variables.tscn
 res://Enemies/normal/enemy_normal.tscn
+res://MainMenu/MainMenu.tscn
