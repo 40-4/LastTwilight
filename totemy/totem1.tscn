@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf8gv733iqdiu"]
+
+[ext_resource type="PackedScene" uid="uid://8vy35f5opdlg" path="res://totemy/totem_base.tscn" id="1_ts3mv"]
+[ext_resource type="Texture2D" uid="uid://c81xw2lwvhn84" path="res://Player/UI/totems_sprites/Totem_of_Light_Presentation.png" id="2_jnuja"]
+
+[node name="TotemBase" instance=ExtResource("1_ts3mv")]
+
+[node name="TextureButton" parent="." index="0"]
+texture_normal = ExtResource("2_jnuja")
