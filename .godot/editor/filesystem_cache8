@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701482691
-enemy_spawn.gd::GDScript::-1::1701478364::0::1::::<>Node<>::
+::res://::1701486410
+enemy_spawn.gd::GDScript::-1::1701486410::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::6650547327386204914::1701451795::1701478562::1::::<><>::
 node.tscn::PackedScene::5866758581080304738::1701478364::0::1::::<><>::res://enemy_spawn.gd
 tile_map.tscn::PackedScene::7058181604728741329::1701481728::0::1::::<><>::uid://ch42b3781hx6u::::res://Map/GroundTileset.png
@@ -9,24 +9,26 @@ test.tscn::PackedScene::9113384123415010131::1701481728::0::1::::<><>::res://Map
 ::res://Enemies/normal/::1701481728
 Enemy Normal.gd::GDScript::-1::1701478562::0::1::::<>CharacterBody2D<>::
 enemy_normal.tscn::PackedScene::4566462954961234378::1701481728::0::1::::<><>::res://Enemies/normal/Enemy Normal.gd<>uid://c10tsprgqw0vu::::res://icon.svg
-::res://Engineer/::1701481402
-EngineerIdle.png::CompressedTexture2D::8526494171798525099::1701481396::1701481402::1::::<><>::
+::res://Engineer/::1701486613
+EngineerIdle.png::CompressedTexture2D::8526494171798525099::1701481396::1701486613::1::::<><>::
 ::res://FX/::1701481402
 Shadow.png::CompressedTexture2D::7842497722874374301::1701481396::1701481402::1::::<><>::
-::res://House/::1701481402
-HouseTilemap.png::CompressedTexture2D::2977605766452084630::1701481396::1701481402::1::::<><>::
+::res://House/::1701486613
+HouseTilemap.png::CompressedTexture2D::2977605766452084630::1701481396::1701486613::1::::<><>::
 ::res://Map/::1701481396
 GroundTileset.png::CompressedTexture2D::5325672893940723590::1701478562::1701478562::1::::<><>::
 Worldgen.gd::GDScript::-1::1701478562::0::1::::<>Node<>::
-::res://Map/Tree/::1701485720
+::res://Map/Tree/::1701486644
 leaf.png::CompressedTexture2D::8445199245787257537::1701486201::1701486202::1::::<><>::
-tree.gdshader::Shader::-1::1701484482::0::1::::<><>::
+tree.tscn::PackedScene::1082040824440975492::1701486281::0::1::::<><>::uid://m1iflo3ql3m1::::res://Map/Tree/Tree_Log.png<>res://Map/Tree/tree.gdshader<>uid://yutjt2r6i7l5::::res://Map/Tree/Tree_Leaves.png<>uid://dsk6gytfdsctt::::res://Map/Tree/leaf.png
+tree.gdshader::Shader::-1::1701486644::0::1::::<><>::
 Tree_Leaves.png::CompressedTexture2D::1726990537869232036::1701481396::1701481402::1::::<><>::
 Tree_Log.png::CompressedTexture2D::896435210851750778::1701481396::1701481402::1::::<><>::
-::res://Player/::1701478562
+::res://Player/::1701487559
+bolt.png::CompressedTexture2D::429899063173960161::1701487559::1701487562::1::::<><>::
 Book.png::CompressedTexture2D::2821307649849012262::1701478562::1701478562::1::::<><>::
-player.gd::GDScript::-1::1701478562::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6476280368805468402::1701478562::0::1::::<><>::res://Player/player.gd<>uid://bvjvahqp6w0wn::::res://Player/Player_Idle.png<>uid://bggwr3wsgth7s::::res://Player/Book.png
+player.gd::GDScript::-1::1701486281::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6476280368805468402::1701486644::0::1::::<><>::res://Player/player.gd<>uid://bvjvahqp6w0wn::::res://Player/Player_Idle.png<>uid://bggwr3wsgth7s::::res://Player/Book.png
 PlayerParticle.png::CompressedTexture2D::942036023792935119::1701478562::1701478562::1::::<><>::
 Player_Idle.png::CompressedTexture2D::3880241249830588637::1701478562::1701478562::1::::<><>::
 ::res://Singletones/::1701454757

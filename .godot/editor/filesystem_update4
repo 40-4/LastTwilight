@@ -3,3 +3,5 @@ res://test.tscn
 res://tile_map.tscn
 res://Map/Tree/tree.gdshader
 res://Player/player.gd
+res://Player/player.tscn
+res://Player/Bullet.gd
