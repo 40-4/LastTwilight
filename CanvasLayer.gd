@@ -1,8 +1,7 @@
 extends CanvasLayer
 
 var buttons
-var totem_hovered = 0
-@onready var player = get_tree().get_first_node_in_group("Player")
+@onready var player = $".."
 @onready var menu = $Control/CenterContainer/TextureRect
 @onready var texts = $Control/texts
 
@@ -43,11 +42,6 @@ func _process(_delta):
 
 
 func _on_texture_button_mouse_entered(id):
-	totem_hovered = id
 	title.text = descriptions[id].title
 	article.text = descriptions[id].description
 	cost.text = descriptions[id].cost
-
-
-func _on_texture_button_mouse_exited():
-	totem_hovered = 0
