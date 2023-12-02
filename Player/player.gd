@@ -14,7 +14,7 @@ var damage
 ###Debug Variables
 @onready var bullet = preload("res://Player/bullet.tscn")
 
-@export var time_slowdown_curve : Curve
+@export var world : Node
 
 var direction : Vector2 = Vector2.ZERO
 var speed : float = 150.0 #TODO: Acceleration
