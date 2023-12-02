@@ -2,6 +2,8 @@ extends Node
 
 var noise
 
+var house_hp = 1000
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	noise = FastNoiseLite.new()
@@ -28,3 +30,8 @@ func get_nice_noise(vec2: Vector2i):
 func _process(delta):
 	pass
 pass # Replace with function body.
+
+func deal_damage_to_house(amount : float):
+	house_hp -= amount
+	print(house_hp)
+	pass

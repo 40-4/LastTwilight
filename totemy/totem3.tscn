@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8obu2ikbywib"]
+
+[ext_resource type="PackedScene" uid="uid://8vy35f5opdlg" path="res://totemy/totem_base.tscn" id="1_lc5cs"]
+[ext_resource type="Texture2D" uid="uid://crnrrmdj0wfnm" path="res://Player/UI/totems_sprites/Totem_of_Power_Presentation.png" id="2_yk0l5"]
+
+[node name="totem_bazowy" instance=ExtResource("1_lc5cs")]
+
+[node name="TextureButton" parent="." index="0"]
+texture_normal = ExtResource("2_yk0l5")

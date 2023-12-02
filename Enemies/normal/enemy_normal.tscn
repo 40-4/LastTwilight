@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6ca8ihrg78d7"]
+[gd_scene load_steps=5 format=3 uid="uid://b6ca8ihrg78d7"]
 
 [ext_resource type="Script" path="res://Enemies/normal/Enemy Normal.gd" id="1_vv1o3"]
 [ext_resource type="Texture2D" uid="uid://c10tsprgqw0vu" path="res://icon.svg" id="2_be0w7"]
@@ -6,7 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ex8rc"]
 radius = 16.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_epx08"]
+radius = 24.0
+
 [node name="Enemy Normal" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_vv1o3")
 metadata/type = "enemy"
 
@@ -16,3 +21,11 @@ shape = SubResource("CircleShape2D_ex8rc")
 [node name="Icon" type="Sprite2D" parent="."]
 self_modulate = Color(0.503229, 0.000128889, 0.696871, 1)
 texture = ExtResource("2_be0w7")
+
+[node name="AttackArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_epx08")
