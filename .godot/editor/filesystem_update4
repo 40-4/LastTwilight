@@ -1,4 +1,10 @@
-res://enemy_spawn.gd
-res://Player/player.gd
-res://node.tscn
+res://Map/Tree/tree.gdshader
+res://Enemies/normal/enemy_normal.tscn
+res://World.gd
+res://test.tscn
+res://tile_map.tscn
 res://Player/player.tscn
+res://Map/Tree/tree.tscn
+res://Player/bullet.tscn
+res://World.tscn
+res://Player/player.gd

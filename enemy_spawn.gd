@@ -88,6 +88,28 @@ func menage_wave(enemies):
 		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount))
 		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount)
 
-
-func spawn_enemy(_variant, amount):
-	print(amount)
+#respi przeciwników na okręgu
+func spawn_enemy(variant, amount):
+	var center = Vector2(0,0)
+	var radius = 145*32
+	var step = 2*PI / amount
+	var angle = 2*PI * randf()
+	for i in range(amount):
+		var direction = Vector2(cos(angle), sin(angle))
+		var pos = center + direction * radius
+		var enemy_scene
+		if variant == 0:
+			enemy_scene = load("res://Enemies/normal/enemy_normal.tscn")
+		elif variant == 1:
+			pass
+		elif variant == 2:
+			pass
+		elif variant == 3:
+			pass
+			
+		var enemy = enemy_scene.instantiate()
+		enemy.position = pos
+		self.add_child(enemy)
+		
+		angle +=step
+		

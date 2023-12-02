@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://pofb303hltui"]
+
+[ext_resource type="Texture2D" uid="uid://m1iflo3ql3m1" path="res://Map/Tree/Tree_Log.png" id="1_r8eh7"]
+[ext_resource type="Shader" path="res://Map/Tree/tree.gdshader" id="2_v5yfh"]
+[ext_resource type="Texture2D" uid="uid://yutjt2r6i7l5" path="res://Map/Tree/Tree_Leaves.png" id="3_id82o"]
+[ext_resource type="Texture2D" uid="uid://dsk6gytfdsctt" path="res://Map/Tree/leaf.png" id="4_hvkiv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykavs"]
+radius = 8.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hg6iu"]
+shader = ExtResource("2_v5yfh")
+shader_parameter/speed = 1.0
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.015
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
+
+[sub_resource type="Gradient" id="Gradient_x6nky"]
+offsets = PackedFloat32Array(0, 0.737705, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a3i76"]
+gradient = SubResource("Gradient_x6nky")
+
+[sub_resource type="Curve" id="Curve_lthrh"]
+max_value = 5.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 5), 13.5747, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_31g7n"]
+curve = SubResource("Curve_lthrh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e5ip4"]
+lifetime_randomness = 0.23
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 12.0
+angle_max = 360.0
+direction = Vector3(0, 1, 0)
+spread = 20.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+damping_min = 2.0
+damping_max = 2.0
+damping_curve = SubResource("CurveTexture_31g7n")
+color_ramp = SubResource("GradientTexture1D_a3i76")
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_ykavs")
+
+[node name="TreeLog" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_r8eh7")
+
+[node name="TreeLeaves" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_hg6iu")
+position = Vector2(0, -32)
+texture = ExtResource("3_id82o")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="TreeLeaves"]
+show_behind_parent = true
+position = Vector2(0, 8)
+process_material = SubResource("ParticleProcessMaterial_e5ip4")
+texture = ExtResource("4_hvkiv")
+lifetime = 4.0
+explosiveness = 0.7
+randomness = 0.55

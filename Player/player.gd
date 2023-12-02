@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 ###Variables
+
+var light : int = 1
+
 var max_hp : int = 3
 var hp : int
 
@@ -9,6 +12,10 @@ var damage
 
 
 ###Debug Variables
+@onready var bullet = preload("res://Player/bullet.tscn")
+
+@export var world : Node
+
 var direction : Vector2 = Vector2.ZERO
 var speed : float = 150.0 #TODO: Acceleration
 var dash_speed : float = 450.0
@@ -16,6 +23,10 @@ var dash_duration : float = 0.3
 var dash_direction : Vector2 = Vector2.ZERO
 var dash_cooldown : float = 0
 var dash_cooldown_base : float = 2.0
+
+var attack_cooldown : float = 0
+var attack_cooldown_base : float = 0.5
+
 var is_dashing : float = 0
 
 ###Onready variables
@@ -47,6 +58,11 @@ func _physics_process(delta):
 		#getting_movement
 		current_speed = speed
 		direction = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
+		
+		if Input.is_action_pressed("attack") and attack_cooldown == 0:
+			attack()
+		
+		###HANDLING TWOJEGO GABRIEL HERE \|/
 	#handling dashes
 	else:
 		current_speed = dash_speed
@@ -65,3 +81,8 @@ func dash():
 	dash_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
 	is_dashing = dash_duration
 	dash_cooldown = dash_cooldown_base + dash_duration
+
+func attack():
+	var i = bullet.instantiate()
+	i.direction = self.global_position.direction_to(book.global_position)
+	###SDFSDFSDFSDFSDFSDFSDFSDFSDF NIE PSUĆ PLS 
