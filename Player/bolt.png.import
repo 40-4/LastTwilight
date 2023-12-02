@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtqkd37c721ud"
-path="res://.godot/imported/EngineerIdle.png-24ceefa54e9691cda69ed340a40b024b.ctex"
+uid="uid://geim0hvg0gjp"
+path="res://.godot/imported/bolt.png-6349a25c857682d8f203c7068b6ab2a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Engineer/EngineerIdle.png"
-dest_files=["res://.godot/imported/EngineerIdle.png-24ceefa54e9691cda69ed340a40b024b.ctex"]
+source_file="res://Player/bolt.png"
+dest_files=["res://.godot/imported/bolt.png-6349a25c857682d8f203c7068b6ab2a3.ctex"]
 
 [params]
 

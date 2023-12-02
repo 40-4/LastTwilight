@@ -1,14 +1,13 @@
-res://enemy_spawn.gd
-res://Player/player.gd
-res://node.tscn
-res://Player/player.tscn
-res://singletones/global_variables.gd
-res://totemy/totem_base.tscn
-res://singletones/global_variables.tscn
-res://CanvasLayer.gd
-res://Player/UI/menu.tscn
-res://totemy/totem1.tscn
-res://totemy/totem3.tscn
 res://World.tscn
-res://World.gd
+res://Map/Tree/tree.gdshader
+res://Enemies/normal/enemy_normal.tscn
+res://test.tscn
+res://tile_map.tscn
+res://Player/player.tscn
+res://Map/Tree/tree.tscn
+res://Player/bullet.tscn
+res://Player/player.gd
 res://Enemies/normal/Enemy Normal.gd
+res://Player/Bullet.gd
+res://World.gd
+res://House/house.gd

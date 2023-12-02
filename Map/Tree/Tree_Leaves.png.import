@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtqkd37c721ud"
-path="res://.godot/imported/EngineerIdle.png-24ceefa54e9691cda69ed340a40b024b.ctex"
+uid="uid://yutjt2r6i7l5"
+path="res://.godot/imported/Tree_Leaves.png-27cf216255eccd568de5a642114bebef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Engineer/EngineerIdle.png"
-dest_files=["res://.godot/imported/EngineerIdle.png-24ceefa54e9691cda69ed340a40b024b.ctex"]
+source_file="res://Map/Tree/Tree_Leaves.png"
+dest_files=["res://.godot/imported/Tree_Leaves.png-27cf216255eccd568de5a642114bebef.ctex"]
 
 [params]
 
