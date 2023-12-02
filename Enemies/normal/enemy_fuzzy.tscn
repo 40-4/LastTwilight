@@ -1,41 +1,35 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6ca8ihrg78d7"]
+[gd_scene load_steps=10 format=3 uid="uid://c5bo6kvywmrwh"]
 
-[ext_resource type="Script" path="res://Enemies/normal/Enemy Normal.gd" id="1_vv1o3"]
-[ext_resource type="Texture2D" uid="uid://drj1437cxijnw" path="res://Enemies/normal/ShadowCreatureGowno2.png" id="2_bnqcq"]
+[ext_resource type="Script" path="res://Enemies/normal/Enemy Normal.gd" id="1_lnih3"]
+[ext_resource type="Texture2D" uid="uid://drj1437cxijnw" path="res://Enemies/normal/ShadowCreatureGowno2.png" id="2_20k5a"]
+[ext_resource type="Texture2D" uid="uid://dwcasauaa700e" path="res://Enemies/normal/Furball.png" id="3_6ftgo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ex8rc"]
 radius = 16.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukjas"]
-atlas = ExtResource("2_bnqcq")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_edj4p"]
+atlas = ExtResource("3_6ftgo")
+region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2b1vk"]
-atlas = ExtResource("2_bnqcq")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfmr4"]
+atlas = ExtResource("3_6ftgo")
+region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0vh0"]
-atlas = ExtResource("2_bnqcq")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c0csf"]
-atlas = ExtResource("2_bnqcq")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iuki"]
+atlas = ExtResource("3_6ftgo")
+region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y2gct"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ukjas")
+"texture": SubResource("AtlasTexture_edj4p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2b1vk")
+"texture": SubResource("AtlasTexture_yfmr4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n0vh0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c0csf")
+"texture": SubResource("AtlasTexture_8iuki")
 }],
 "loop": true,
 "name": &"default",
@@ -50,7 +44,7 @@ z_as_relative = false
 y_sort_enabled = true
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_vv1o3")
+script = ExtResource("1_lnih3")
 metadata/type = "enemy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -59,14 +53,13 @@ shape = SubResource("CircleShape2D_ex8rc")
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false
 self_modulate = Color(0.503229, 0.000128889, 0.696871, 1)
-texture = ExtResource("2_bnqcq")
+texture = ExtResource("2_20k5a")
 hframes = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_y2gct")
 autoplay = "default"
-frame = 3
-frame_progress = 1.0
+frame_progress = 0.572814
 
 [node name="AttackArea" type="Area2D" parent="."]
 unique_name_in_owner = true

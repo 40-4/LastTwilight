@@ -1,10 +1,12 @@
-res://Player/player.tscn
+res://World.tscn
 res://UI/Panels/Panel1.tres
 res://UI/Panels/Panel1_Unfocused.tres
 res://UI/Panels/Panel1_Pressed.tres
 res://Theme/MainMenuTheme.tres
+res://enemy_spawn.gd
+res://Enemies/normal/enemy_fuzzy.tscn
+res://Enemies/normal/enemy_normal.tscn
+res://Player/player.tscn
 res://node.tscn
 res://Player/UI/menu.tscn
-res://World.tscn
 res://singletones/global_variables.tscn
-res://Enemies/normal/enemy_normal.tscn

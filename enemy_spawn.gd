@@ -7,9 +7,9 @@ var wave_strenght = 50
 #modifier do statów dla potworów
 var level = 0
 #ilosc rodzajów
-var variants = 0
+var variants = 1
 #dict mocy variantów
-var variants_strenght = {0:1,1:5,2:3,3:10}
+var variants_strenght = {0:1,1:3,2:3,3:10}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -101,7 +101,7 @@ func spawn_enemy(variant, amount):
 		if variant == 0:
 			enemy_scene = load("res://Enemies/normal/enemy_normal.tscn")
 		elif variant == 1:
-			pass
+			enemy_scene = load("res://Enemies/normal/enemy_fuzzy.tscn")
 		elif variant == 2:
 			pass
 		elif variant == 3:
