@@ -25,16 +25,6 @@ func _ready():
 			y -= 150
 			tilemap.set_cell(0, Vector2i(x,y), 0)
 
-func get_nice_noise(vec2: Vector2i):
-	var n = noise.get_noise_2dv(vec2)
-	if n < 0.25:
-		return 1
-	elif n < 0.5:
-		return 2
-	elif n < 0.75:
-		return 3
-	else:
-		return 4
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://uql6vt5ijrj7"]
+
+[ext_resource type="Texture2D" uid="uid://r5l4wl0a5qlt" path="res://Totems/sprites/Totem_of_Power_Active.png" id="1_qr2fi"]
+[ext_resource type="Texture2D" uid="uid://b87pxgh7qxwe5" path="res://Totems/sprites/Totem_of_Power_Inactive.png" id="2_xy7nb"]
+
+[sub_resource type="GDScript" id="GDScript_rwjqk"]
+script/source = "extends Totem
+
+var bullet = preload(\"res://Player/bullet.tscn\")
+var curr_cooldown = 0.0
+
+func _ready():
+	super()
+	self.cost = 20
+	self.damage = 15
+	self.cooldown = 3
+	self.range = 65
+
+func _physics_process(delta):
+	super(delta)
+	var targets = []
+	for i in get_tree().get_nodes_in_group(\"Enemies\"):
+		if i.global_position.distance_to(self.global_position) <= range:
+			targets.append(i)
+	
+	if len(targets) > 0:
+		shoot(targets[0])
+	curr_cooldown = max(curr_cooldown - delta, 0)
+
+func shoot(target):
+	print(\"2nd AMMENDMENT!!!!\")
+	if curr_cooldown == 0.0:
+		var i = bullet.instantiate()
+		i.global_position = self.global_position + Vector2(0, -16)
+		i.direction = global_position.direction_to(target.global_position)
+		i.damage = damage
+		get_tree().get_first_node_in_group(\"bullets\").add_child(i)
+		curr_cooldown = cooldown
+	
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnnv3"]
+radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1njnm"]
+atlas = ExtResource("1_qr2fi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv5y7"]
+atlas = ExtResource("1_qr2fi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee657"]
+atlas = ExtResource("1_qr2fi")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp07m"]
+atlas = ExtResource("1_qr2fi")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ll5r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1njnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv5y7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee657")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp07m")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xy7nb")
+}],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[node name="Totem_power" type="Area2D"]
+script = SubResource("GDScript_rwjqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mnnv3")
+
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_8ll5r")
+animation = &"active"
+autoplay = "active"
+frame_progress = 0.167996
