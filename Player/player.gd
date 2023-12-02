@@ -9,7 +9,7 @@ var hp : int
 
 var damage
 
-var players_totems = [1, 2]
+var players_totems = [1, 3, 5]
 
 ###Debug Variables
 @onready var bullet = preload("res://Player/bullet.tscn")
@@ -53,7 +53,9 @@ func _process(delta):
 	elif Input.is_action_just_pressed("build_mode") && !not_building:
 		if $Menu.totem_hovered != 0:
 			var totem_scene = load(GlobalVariables.totems[$Menu.totem_hovered])
-			self.add_child(totem_scene.instantiate())
+			var new_totem= totem_scene.instantiate()
+			new_totem.position = position
+			get_tree().get_first_node_in_group("tilemap").add_child(new_totem)
 		not_building = true
 		$Menu.queue_free()	
 	

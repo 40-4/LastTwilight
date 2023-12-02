@@ -140,7 +140,7 @@ script = ExtResource("1_bttde")
 script = ExtResource("2_jwmd4")
 curve = SubResource("Curve_tqahc")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." groups=["tilemap"]]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_dfx11")
 format = 2
@@ -154,7 +154,7 @@ layer_1/tile_data = PackedInt32Array(131072, 131072, 0, 196608, 262144, 0, 26214
 [node name="Player" parent="TileMap" node_paths=PackedStringArray("world") instance=ExtResource("5_o33ci")]
 world = NodePath("../..")
 
-[node name="Bullets" type="Node2D" parent="."]
+[node name="Bullets" type="Node2D" parent="." groups=["bullets"]]
 
 [node name="Enemy Normal" parent="." instance=ExtResource("6_hsgyg")]
 position = Vector2(40, 136)

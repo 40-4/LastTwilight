@@ -23,7 +23,6 @@ func _physics_process(delta):
 	curr_cooldown = max(curr_cooldown - delta, 0)
 
 func shoot(target):
-	print("2nd AMMENDMENT!!!!")
 	if curr_cooldown == 0.0:
 		var i = bullet.instantiate()
 		i.boom = true

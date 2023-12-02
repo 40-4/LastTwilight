@@ -1,16 +1,9 @@
-res://node.tscn
-res://World.tscn
-res://Totems/Totem_baza.gd
-res://Totems/totem_baza.tscn
-res://Light/light.gd
-res://Light/light.tscn
-res://Totems/totem_of_light.tscn
-res://Totems/totem_of_light.gd
-res://World.gd
-res://Enemies/normal/enemy_normal.tscn
-res://Player/bullet.tscn
-res://Player/Bullet.gd
 res://Player/player.tscn
-res://Totems/totem_of_power.tscn
-res://Totems/totem_of_destruction.tscn
+res://node.tscn
+res://Player/UI/menu.tscn
+res://World.tscn
+res://singletones/global_variables.tscn
+res://Player/player.gd
+res://Enemies/normal/enemy_normal.tscn
+res://Enemies/normal/Enemy Normal.gd
 res://Totems/totem_of_destruction.gd
