@@ -1,7 +1,4 @@
-res://Player/player.tscn
+res://enemy_spawn.gd
 res://Player/player.gd
-res://test.tscn
-res://Map/Worldgen.gd
-res://Enemy Normal.gd
-res://Enemies/normal/enemy_normal.tscn
-res://Enemies/normal/Enemy Normal.gd
+res://node.tscn
+res://Player/player.tscn

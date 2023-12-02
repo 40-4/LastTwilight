@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpt5wlenpuqdm"]
+
+[ext_resource type="Script" path="res://enemy_spawn.gd" id="1_8ro4x"]
+
+[sub_resource type="Curve" id="Curve_tqahc"]
+_data = [Vector2(0, 0.151215), 0.626425, 0.0720567, 0, 0, Vector2(0.321192, 0.228378), 0.0, 0.0, 0, 0, Vector2(0.390728, 0.511306), 1.24359, 1.24359, 0, 0, Vector2(0.917219, 0.647258), 0.968436, 0.968436, 0, 0, Vector2(1, 1), -0.273965, -0.273965, 0, 0]
+point_count = 5
+
+[node name="Node" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="enemy" type="Node" parent="."]
+script = ExtResource("1_8ro4x")
+curve = SubResource("Curve_tqahc")
