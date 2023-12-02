@@ -1,3 +1,4 @@
-res://Player/player.tscn
+res://enemy_spawn.gd
 res://Player/player.gd
-res://test.tscn
+res://node.tscn
+res://Player/player.tscn

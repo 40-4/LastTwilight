@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://d23udtoeec5al"]
+[gd_scene load_steps=5 format=3 uid="uid://d23udtoeec5al"]
 
+[ext_resource type="Script" path="res://Map/Worldgen.gd" id="1_0up8a"]
 [ext_resource type="PackedScene" uid="uid://cyjfnksv54alu" path="res://Player/player.tscn" id="1_85x1c"]
-[ext_resource type="Texture2D" uid="uid://c10tsprgqw0vu" path="res://icon.svg" id="2_dw378"]
+[ext_resource type="PackedScene" uid="uid://b6ca8ihrg78d7" path="res://Enemies/normal/enemy_normal.tscn" id="3_1wp81"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tirhu"]
+noise_type = 2
+fractal_type = 3
+cellular_return_type = 2
+domain_warp_type = 1
+domain_warp_amplitude = 13.325
 
 [node name="Test" type="Node2D"]
 
+[node name="Worldgen" type="Node" parent="."]
+script = ExtResource("1_0up8a")
+noise = SubResource("FastNoiseLite_tirhu")
+
 [node name="Player" parent="." instance=ExtResource("1_85x1c")]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(336, 128)
-texture = ExtResource("2_dw378")
+[node name="Enemy Normal" parent="." instance=ExtResource("3_1wp81")]
+position = Vector2(800, 360)
