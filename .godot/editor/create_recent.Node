@@ -1,5 +1,7 @@
-Node
-TileMap
-Camera2D
 CollisionShape2D
+GPUParticles2D
+StaticBody2D
+TileMap
+Node
+Camera2D
 CharacterBody2D

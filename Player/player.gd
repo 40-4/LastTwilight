@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 ###Variables
+
+var light : int = 1
+
 var max_hp : int = 3
 var hp : int
 
@@ -9,6 +12,8 @@ var damage
 
 
 ###Debug Variables
+@export var time_slowdown_curve : Curve
+
 var direction : Vector2 = Vector2.ZERO
 var speed : float = 150.0 #TODO: Acceleration
 var dash_speed : float = 450.0

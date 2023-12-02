@@ -1,2 +1,5 @@
 res://Enemies/normal/enemy_normal.tscn
 res://test.tscn
+res://tile_map.tscn
+res://Map/Tree/tree.gdshader
+res://Player/player.gd
