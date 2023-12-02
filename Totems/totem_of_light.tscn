@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://bq2m5vqq1rv1v"]
+
+[ext_resource type="Script" path="res://Totems/totem_of_light.gd" id="1_nkfj0"]
+[ext_resource type="Texture2D" uid="uid://q51hiaytanrk" path="res://Totems/sprites/Totem_of_Light_Active.png" id="2_eo7m8"]
+[ext_resource type="Texture2D" uid="uid://cydevoudaa8a2" path="res://Totems/sprites/Totem_of_Light_Inactive.png" id="3_vg0g3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnnv3"]
+radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpgc4"]
+atlas = ExtResource("2_eo7m8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm5y6"]
+atlas = ExtResource("2_eo7m8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ib4kt"]
+atlas = ExtResource("2_eo7m8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_givdv"]
+atlas = ExtResource("2_eo7m8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ll5r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpgc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm5y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ib4kt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_givdv")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vg0g3")
+}],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[node name="Totem_light" type="Area2D"]
+position = Vector2(96, 96)
+script = ExtResource("1_nkfj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mnnv3")
+
+[node name="Icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_8ll5r")
+animation = &"active"
+autoplay = "active"
+frame_progress = 0.223686
