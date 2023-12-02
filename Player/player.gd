@@ -48,6 +48,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	dash_cooldown = max(dash_cooldown - delta, 0)
+	attack_cooldown =  max(attack_cooldown - delta, 0)
 	#setting temps variables
 	var current_speed : float = 0 
 	#checking dashes:
@@ -83,6 +84,13 @@ func dash():
 	dash_cooldown = dash_cooldown_base + dash_duration
 
 func attack():
+	attack_cooldown = attack_cooldown_base
+	
 	var i = bullet.instantiate()
-	i.direction = self.global_position.direction_to(book.global_position)
+	i.direction = (self.global_position + pivot_book.position).direction_to(book.global_position)
+	i.position = book.global_position
+	world.add_child(i)
+	
+	
+	print("atak")
 	###SDFSDFSDFSDFSDFSDFSDFSDFSDF NIE PSUĆ PLS 

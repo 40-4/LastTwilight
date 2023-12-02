@@ -57,5 +57,7 @@ func look_for_targets() -> Vector2:
 		return current_target.get_global_position()
 
 
-func damage(amount : float, effect : Array):
-	print("AŁA")
+func damage(amount : float, effect : Array = []):
+	hp -= amount
+	if hp < 0:
+		queue_free()
