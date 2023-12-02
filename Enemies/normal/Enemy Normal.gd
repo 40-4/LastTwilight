@@ -70,7 +70,7 @@ func look_for_targets() -> Vector2:
 		return current_target.get_global_position()
 
 func attack(target):
-	print("I'm currently destroying " + target.name)
+	#print("I'm currently destroying " + target.name)
 	target.deal_damage(5.0)
 
 func damage(amount : float, effect : Array = []):
