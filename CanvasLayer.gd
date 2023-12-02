@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var buttons
-@onready var player = $"../../player"
+@onready var player = $".."
 @onready var menu = $Control/CenterContainer/TextureRect
 @onready var texts = $Control/texts
 
@@ -14,7 +14,7 @@ var descriptions = {1:{"title":"Totem of Light", "description":"Basic shooting t
 func _ready():
 	#podstawić przyciski pod id
 	buttons = {1:$buttons/TextureButton1, 2:$buttons/TextureButton2, 3:$buttons/TextureButton3, 4:$buttons/TextureButton4, 5:$buttons/TextureButton5, 6:$buttons/TextureButton6, 7:$buttons/TextureButton7, 8:$buttons/TextureButton8, 9:$buttons/TextureButton9, 10:$buttons/TextureButton10, 11:$buttons/TextureButton11, 12:$buttons/TextureButton12, 13:$buttons/TextureButton13, 14:$buttons/TextureButton14, 15:$buttons/TextureButton15}
-	var totems = [1,2,3,4,5,6,7,8,9]
+	var totems = player.players_totems
 	var amount = totems.size()
 	var center = Vector2(0,0)
 	var radius = 170
@@ -32,7 +32,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	var najechany = false
-	for i in [1,2,3,4,5,6,7,8,9]:
+	for i in player.players_totems:
 		najechany = najechany or buttons[i].is_hovered()
 	if najechany:
 		texts.show()

@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cyjfnksv54alu"]
+[gd_scene load_steps=11 format=3 uid="uid://cyjfnksv54alu"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_wosn6"]
 [ext_resource type="Texture2D" uid="uid://bvjvahqp6w0wn" path="res://Player/Player_Idle.png" id="2_cdgk1"]
 [ext_resource type="Texture2D" uid="uid://bggwr3wsgth7s" path="res://Player/Book.png" id="3_3bdk6"]
-[ext_resource type="PackedScene" uid="uid://hnckhy4kpfrp" path="res://Player/UI/menu.tscn" id="3_uoe4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u1g2m"]
 radius = 12.0
@@ -110,6 +109,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Player", "Targettable"]]
 script = ExtResource("1_wosn6")
+metadata/type = "player"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_u1g2m")
@@ -136,8 +136,6 @@ libraries = {
 "": SubResource("AnimationLibrary_svxbu")
 }
 autoplay = "idle"
-
-[node name="CanvasLayer" parent="." instance=ExtResource("3_uoe4c")]
 
 [node name="Pivot" type="Marker2D" parent="."]
 position = Vector2(0, -16)

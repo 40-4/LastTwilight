@@ -6,7 +6,7 @@ var hp : int
 
 var damage
 
-
+var players_totems = [1, 2]
 
 ###Debug Variables
 var direction : Vector2 = Vector2.ZERO
@@ -33,6 +33,9 @@ func _process(delta):
 	sprite.skew = (lerp(skew, direction.x * 10, 1-pow(0.5, delta)))
 	pivot_book.look_at(get_global_mouse_position())
 	book.rotation = pivot_book.rotation * -1
+	if Input.is_action_pressed("build_mode"):
+		var build_scene = load("res://Player/UI/menu.tscn")
+		self.add_child(build_scene.instantiate())
 
 
 func _physics_process(delta):

@@ -9,3 +9,6 @@ res://CanvasLayer.gd
 res://Player/UI/menu.tscn
 res://totemy/totem1.tscn
 res://totemy/totem3.tscn
+res://World.tscn
+res://World.gd
+res://Enemies/normal/Enemy Normal.gd
