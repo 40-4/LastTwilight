@@ -33,5 +33,4 @@ pass # Replace with function body.
 
 func deal_damage_to_house(amount : float):
 	house_hp -= amount
-	print(house_hp)
 	pass

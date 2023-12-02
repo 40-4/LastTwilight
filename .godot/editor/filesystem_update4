@@ -1,13 +1,8 @@
-res://World.tscn
-res://Map/Tree/tree.gdshader
-res://Enemies/normal/enemy_normal.tscn
-res://test.tscn
-res://tile_map.tscn
 res://Player/player.tscn
-res://Map/Tree/tree.tscn
-res://Player/bullet.tscn
+res://node.tscn
+res://Player/UI/menu.tscn
 res://Player/player.gd
+res://World.tscn
+res://CanvasLayer.gd
 res://Enemies/normal/Enemy Normal.gd
-res://Player/Bullet.gd
 res://World.gd
-res://House/house.gd
