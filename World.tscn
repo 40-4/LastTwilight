@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cb7bxmv2mfan7"]
+[gd_scene load_steps=12 format=3 uid="uid://cb7bxmv2mfan7"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_bttde"]
 [ext_resource type="Script" path="res://enemy_spawn.gd" id="2_jwmd4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ch42b3781hx6u" path="res://Map/GroundTileset.png" id="4_lvebw"]
 [ext_resource type="PackedScene" uid="uid://cyjfnksv54alu" path="res://Player/player.tscn" id="5_o33ci"]
 [ext_resource type="PackedScene" uid="uid://b6ca8ihrg78d7" path="res://Enemies/normal/enemy_normal.tscn" id="6_hsgyg"]
+[ext_resource type="PackedScene" uid="uid://egtajj66l0jp" path="res://Light/light.tscn" id="7_lj8xn"]
 
 [sub_resource type="Curve" id="Curve_tqahc"]
 _data = [Vector2(0, 0.151215), 0.626425, 0.0720567, 0, 0, Vector2(0.321192, 0.228378), 0.0, 0.0, 0, 0, Vector2(0.390728, 0.511306), 1.24359, 1.24359, 0, 0, Vector2(0.917219, 0.647258), 0.968436, 0.968436, 0, 0, Vector2(1, 1), -0.273965, -0.273965, 0, 0]
@@ -93,3 +94,6 @@ world = NodePath("../..")
 
 [node name="Enemy Normal" parent="." instance=ExtResource("6_hsgyg")]
 position = Vector2(40, 136)
+
+[node name="Light" parent="." instance=ExtResource("7_lj8xn")]
+position = Vector2(88, -40)
