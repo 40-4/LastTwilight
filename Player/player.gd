@@ -45,4 +45,4 @@ func _physics_process(delta):
 
 
 func dash():
-	
+	pass
