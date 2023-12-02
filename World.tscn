@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cb7bxmv2mfan7"]
+[gd_scene load_steps=16 format=3 uid="uid://sy8m5tphi3kq"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_bttde"]
 [ext_resource type="Script" path="res://enemy_spawn.gd" id="2_jwmd4"]

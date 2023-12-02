@@ -28,6 +28,7 @@ var attack_cooldown : float = 0
 var attack_cooldown_base : float = 0.5
 
 var is_dashing : float = 0
+var not_building : float = true
 
 ###Onready variables
 @onready var pivot_book = $Pivot
@@ -44,9 +45,18 @@ func _process(delta):
 	sprite.skew = (lerp(skew, direction.x * 10, 1-pow(0.5, delta)))
 	pivot_book.look_at(get_global_mouse_position())
 	book.rotation = pivot_book.rotation * -1
-	if Input.is_action_pressed("build_mode"):
+	
+	if Input.is_action_just_pressed("build_mode") && not_building:
+		not_building = false
 		var build_scene = load("res://Player/UI/menu.tscn")
 		self.add_child(build_scene.instantiate())
+	elif Input.is_action_just_pressed("build_mode") && !not_building:
+		if $Menu.totem_hovered != 0:
+			var totem_scene = load(GlobalVariables.totems[$Menu.totem_hovered])
+			self.add_child(totem_scene.instantiate())
+		not_building = true
+		$Menu.queue_free()	
+	
 
 
 func _physics_process(delta):
@@ -65,7 +75,7 @@ func _physics_process(delta):
 		
 		if Input.is_action_pressed("attack") and attack_cooldown == 0:
 			attack()
-		
+	
 		###HANDLING TWOJEGO GABRIEL HERE \|/
 	#handling dashes
 	else:

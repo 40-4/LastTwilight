@@ -1,7 +1,5 @@
-res://MainMenu
-res://singletones
-res://UI/Panels
-res://Theme
+res://Light
+res://Totems
 res://Player
 res://Map/Tree
 res://
