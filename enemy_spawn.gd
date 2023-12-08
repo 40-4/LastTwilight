@@ -3,7 +3,7 @@ extends Node
 @export var curve: Curve
 
 #siła fali 
-var wave_strenght = 50
+var wave_strenght = 1000
 #modifier do statów dla potworów
 var level = 0
 #ilosc rodzajów
@@ -29,65 +29,36 @@ func spawn_wave():
 
 #funkcja tworząca prompt o spawn odpowienich przeciwników w interwałach
 func menage_wave(enemies):
-	var enemies_left = [] + enemies.duplicate(true)
-	
+	var overflow = {0: 0, 1: 0, 2: 0, 3:0}
 	##LEPIEJ NIE RUSZAĆ !!!!!!!!!!!!!!!!!!!
-	
 	#spawn 1. części fali
-	for i in range(5):
+	for i in range(54):
 		for enemy in enemies:
-			spawn_enemy(enemy.variant, floor(enemy.amount*0.009))
-			enemies_left[enemy.variant].amount -= floor(enemy.amount*0.009)
-		await get_tree().create_timer(5).timeout
-	for enemy in enemies:
-		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount-enemy.amount*0.946))
-		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount-enemy.amount*0.946)
-	await get_tree().create_timer(5).timeout
-	for i in range(4):
-		for enemy in enemies:
-			spawn_enemy(enemy.variant, floor(enemy.amount*0.009))
-			enemies_left[enemy.variant].amount -= floor(enemy.amount*0.009)
-		await get_tree().create_timer(5).timeout
-	for enemy in enemies:
-		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount-enemy.amount*0.9))
-		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount-enemy.amount*0.9)
-	await get_tree().create_timer(5).timeout
+			spawn_enemy(enemy.variant, floor(enemy.amount*0.0018)+floor(overflow[enemy.variant]))
+			overflow[enemy.variant] -= floor(overflow[enemy.variant])
+			overflow[enemy.variant] += enemy.amount*0.0018 - floor(enemy.amount*0.0018)
+		await get_tree().create_timer(1).timeout
 	#spawn 2. części fali
-	for i in range(6):
+	print("faza2")
+	for i in range(108):
 		for enemy in enemies:
-			spawn_enemy(enemy.variant, floor(enemy.amount*0.03))
-			enemies_left[enemy.variant].amount -= floor(enemy.amount*0.03)
-		await get_tree().create_timer(5).timeout
-	for enemy in enemies:
-		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount-enemy.amount*0.69))
-		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount-enemy.amount*0.69)
-	await get_tree().create_timer(5).timeout
-	for i in range(6):
-		for enemy in enemies:
-			spawn_enemy(enemy.variant, floor(enemy.amount*0.03))
-			enemies_left[enemy.variant].amount -= floor(enemy.amount*0.03)
-		await get_tree().create_timer(5).timeout
-	for enemy in enemies:
-		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount-enemy.amount*0.48))
-		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount-enemy.amount*0.48)
-	await get_tree().create_timer(5).timeout
-	for i in range(5):
-		for enemy in enemies:
-			spawn_enemy(enemy.variant, floor(enemy.amount*0.03))
-			enemies_left[enemy.variant].amount -= floor(enemy.amount*0.03)
-		await get_tree().create_timer(5).timeout
-	for enemy in enemies:
-		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount-enemy.amount*0.3))
-		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount-enemy.amount*0.3)
+			spawn_enemy(enemy.variant, floor(enemy.amount*0.006)+floor(overflow[enemy.variant]))
+			overflow[enemy.variant] -= floor(overflow[enemy.variant])
+			overflow[enemy.variant] += enemy.amount*0.006 - floor(enemy.amount*0.006)
+		await get_tree().create_timer(1).timeout
 	#spawn finału fali
-	for i in range(4):
+	print("faza3")
+	for i in range(18):
 		for enemy in enemies:
-			spawn_enemy(enemy.variant, floor(enemy.amount*0.06))
-			enemies_left[enemy.variant].amount -= floor(enemy.amount*0.06)
-	for enemy in enemies:
-		spawn_enemy(enemy.variant, ceil(enemies_left[enemy.variant].amount))
-		enemies_left[enemy.variant].amount -= ceil(enemies_left[enemy.variant].amount)
-
+			spawn_enemy(enemy.variant, floor(enemy.amount*0.012)+floor(overflow[enemy.variant]))
+			overflow[enemy.variant] -= floor(overflow[enemy.variant])
+			overflow[enemy.variant] += enemy.amount*0.012 - floor(enemy.amount*0.012)
+		await get_tree().create_timer(1).timeout
+	
+	level += 1
+	wave_strenght += 10000
+	spawn_wave()
+	
 #respi przeciwników na okręgu
 func spawn_enemy(variant, amount):
 	var center = Vector2(0,0)

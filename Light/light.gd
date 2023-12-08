@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if global_position.distance_to(Player.global_position) <= 15:
+	if global_position.distance_to(Player.global_position) <= 30:
 		GlobalVariables.light += 5
 		self.queue_free()
 	

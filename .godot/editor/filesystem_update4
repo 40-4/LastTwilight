@@ -9,3 +9,11 @@ res://World.tscn
 res://singletones/global_variables.tscn
 res://Enemies/normal/enemy_normal.tscn
 res://MainMenu/MainMenu.tscn
+res://CanvasLayer.gd
+res://Light/light.gd
+res://enemy_spawn.gd
+res://Totems/totem_of_light.gd
+res://Totems/totem_of_power.gd
+res://Totems/totem_of_destruction.gd
+res://singletones/global_variables.gd
+res://World.gd

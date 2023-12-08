@@ -6,7 +6,7 @@ var house_hp = 1000
 
 var menu_scene = "res://MainMenu/MainMenu.tscn"
 
-var time = -60
+var time = -40
 
 var was_message_displayed = false
 

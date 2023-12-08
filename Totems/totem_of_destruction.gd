@@ -8,8 +8,8 @@ func _ready():
 	self.longevity = 3
 	self.cost = 20
 	self.damage = 20
-	self.cooldown = 5
-	self.range = 100
+	self.cooldown = 0.3
+	self.range = 300
 
 func _physics_process(delta):
 	super(delta)

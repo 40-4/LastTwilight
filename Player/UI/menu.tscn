@@ -69,17 +69,16 @@ autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Control/texts/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
 text = "Cost: 10 esence"
 horizontal_alignment = 1
 
 [node name="buttons" type="Node" parent="."]
 
 [node name="TextureButton1" type="TextureButton" parent="buttons"]
-visible = false
-offset_left = 468.0
-offset_top = 285.0
-offset_right = 508.0
-offset_bottom = 325.0
+offset_right = 40.0
+offset_bottom = 40.0
 texture_normal = ExtResource("3_hyn6m")
 
 [node name="TextureButton2" type="TextureButton" parent="buttons"]
